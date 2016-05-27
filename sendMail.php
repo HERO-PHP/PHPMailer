@@ -8,14 +8,14 @@
         foreach($mailLists as $mailInfo)
         {
             $mail = new PHPMailer();
-            $mail->Host         = '';//smtp.office365.com
+            $mail->Host         = '';//host
 			$mail->isSMTP();
-            $mail->Port         = 587;
+            $mail->Port         = 587;//port
             $mail->SMTPAuth     = true;
-            $mail->Username     = 'username';//
-            $mail->Password     = 'password';//
-            $mail->From         = 'Sender`s mailbox';//
-            $mail->FromName     = 'sender`s tagging/name';//
+            $mail->Username     = '';//username
+            $mail->Password     = '';//pwd
+            $mail->From         = '';//sender
+            $mail->FromName     = '';//sender remark
 			$mail->SMTPSecure   = 'tls';
             $mail->CharSet      = 'UTF-8';
 
@@ -47,13 +47,13 @@
         array(
             'subject'       => 'test111',
             'addressee'     => '11@qq.com',
-            'cc'            => '11@163.com',
+            'cc'            => '22@163.com',
             'content'       => 'send mail 1111',
         ),
         array(
             'subject'       => 'test222',
             'addressee'     => '33@163.com',
-            'cc'            => '11@163.com',
+            'cc'            => '44@163.com',
             'content'       => 'send mail 2222',
         )
     );
